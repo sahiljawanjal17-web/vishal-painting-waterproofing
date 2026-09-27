@@ -1,0 +1,66 @@
+/* Phone / small-tablet fixes. The older section styles (layout/section.css, header.css) were
+   written desktop-first, so this file overrides them downward; it must load after them
+   (last import in main.css). Newer components (partner cards, gallery, profile, info
+   sections, hero slider) already size themselves and don't need anything here. */
+
+/* ---- < 1024px: services 3 -> 2 columns ---- */
+@media (max-width: 1023px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---- < 768px: phone layout ---- */
+@media (max-width: 767px) {
+  section { padding: var(--space-6) 0; }
+  .hero-section { padding: var(--space-6) 0 var(--space-5); }
+  .trust-micro { margin-bottom: var(--space-5); }
+
+  /* Header: one sticky row = brand + language toggle. The nav links and the header
+     "Book" button are dropped here: the hero has both CTAs and the contact dock is always
+     on screen. The hamburger opens the links in a drawer (nav-drawer.css). */
+  .site-header { padding: var(--space-2) 0; }
+  .header-inner { gap: var(--space-3); }
+  .brand {
+    flex: 1;
+    min-width: 0; /* lets the brand wrap onto two lines instead of pushing the toggle off-screen */
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  .header-actions { gap: 0; }
+  .header-actions .icon-btn { margin-right: var(--space-2); }
+  .header-actions > :not(.lang-toggle-group):not(.icon-btn) { display: none; }
+  .header-actions .nav-toggle { margin-right: 0; }
+  .lang-btn {
+    min-height: 40px;
+    padding: 4px 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+}
+
+/* ---- < 640px: single-column grids ---- */
+@media (max-width: 639px) {
+  .services-grid { grid-template-columns: 1fr; }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5) var(--space-3);
+  }
+  .trust-item .counter { font-size: 2rem; }
+
+  .estimator-box { padding: var(--space-4); }
+  .estimator-inputs { grid-template-columns: 1fr; }
+  .estimator-inputs label { min-width: 0; }
+  .estimator-inputs input,
+  .estimator-inputs select {
+    width: 100%;
+    min-height: 44px; /* tap target */
+  }
+  .est-price { font-size: 1.5rem; }
+
+  .wizard { padding: var(--space-4); }
+}

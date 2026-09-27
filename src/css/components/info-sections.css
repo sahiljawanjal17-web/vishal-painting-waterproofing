@@ -1,0 +1,157 @@
+/* Home-page info sections: location, payment options, offers
+   (location-map.js, payments.js, offers.js). Headings are centred by the global h2 rule. */
+.section-sub {
+  margin: calc(-1 * var(--space-3)) 0 var(--space-5);
+  text-align: center;
+  color: var(--c-text-secondary);
+}
+
+.section-note {
+  margin-top: var(--space-4);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+}
+
+/* ---- Payments ---- */
+.pay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: var(--space-3);
+}
+
+.pay-tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  background: var(--c-bg-raised);
+}
+
+.pay-tile__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--c-bg-surface);
+}
+
+.pay-tile__icon .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.pay-tile__note {
+  font-size: 0.85rem;
+  color: var(--c-text-secondary);
+}
+
+/* ---- Location ---- */
+.loc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.loc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  background: var(--c-bg-raised);
+}
+
+.loc-card > * { max-width: 100%; }
+
+.loc-card p { color: var(--c-text-secondary); }
+
+.loc-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.9rem;
+}
+
+.loc-card__meta .icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.loc-card__privacy {
+  font-size: 0.8rem;
+  color: var(--c-text-muted);
+}
+
+.loc-status {
+  min-height: 1.4em; /* keeps the card from jumping when the message appears */
+  font-size: 0.9rem;
+}
+
+.loc-map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--c-bg-surface);
+}
+
+.loc-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---- Offers ---- */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-3);
+}
+
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  background: var(--c-bg-raised);
+}
+
+.offer-card p {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--c-text-secondary);
+}
+
+.offer-card .btn { margin-top: var(--space-2); }
+
+.offer-card__tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.offer-card__sample {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--c-text-secondary);
+}
+
+@media (min-width: 768px) {
+  .loc-grid { grid-template-columns: 1fr 1fr; }
+}

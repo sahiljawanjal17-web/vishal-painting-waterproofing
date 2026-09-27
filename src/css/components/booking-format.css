@@ -1,0 +1,73 @@
+/* "Quick booking format" sheet: looks like a paper form the customer fills in. */
+/* Popup opened from the header icon. Native <dialog>: focus trap, Esc and backdrop come free. */
+.format-dialog {
+  width: min(680px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: var(--space-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  background: var(--c-bg-page);
+  color: var(--c-text-primary);
+  box-shadow: 0 24px 60px rgba(39, 48, 58, 0.25);
+  overflow-y: auto;
+}
+
+.format-dialog::backdrop { background: rgba(39, 48, 58, 0.45); backdrop-filter: blur(3px); }
+.format-dialog__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-2); }
+.format-dialog__head h2 { font-size: 1.5rem; text-align: left; margin: 0; }
+.format-dialog__lead { color: var(--c-text-secondary); margin-bottom: var(--space-4); font-size: 0.95rem; }
+.format-dialog__close {
+  width: 44px; height: 44px; flex: none;
+  border: 1px solid var(--c-border); border-radius: var(--radius-full);
+  background: var(--c-bg-raised); color: var(--c-brand);
+  font-size: 1.5rem; line-height: 1; cursor: pointer;
+}
+.format-dialog__close:hover { background: var(--c-brand); color: var(--c-on-brand); }
+.format-dialog__close:focus-visible { outline: 3px solid var(--c-accent); outline-offset: 2px; }
+
+.format { max-width: 680px; margin: 0 auto; }
+.format__steps { text-align: center; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-accent); margin-bottom: var(--space-3); }
+
+.format__card {
+  background: var(--c-bg-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5) var(--space-4);
+  /* Faint top rule + soft shadow read as a sheet of paper. */
+  border-top: 4px solid var(--c-mist);
+  box-shadow: 0 10px 30px rgba(39, 48, 58, 0.06);
+}
+
+.format__heading { font-weight: 700; letter-spacing: 0.1em; text-align: center; color: var(--c-brand); margin-bottom: var(--space-3); }
+
+.format__sheet { list-style: none; margin: 0; padding: 0; counter-reset: row; }
+.format__sheet:focus-visible { outline: 3px solid var(--c-accent); outline-offset: 4px; }
+
+.format__row {
+  counter-increment: row;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px dashed var(--c-border);
+}
+
+.format__row:last-child { border-bottom: 0; }
+.format__label { font-weight: 600; grid-column: 1 / -1; }
+.format__label::before { content: counter(row) '. '; color: var(--c-accent); }
+/* The blank the customer fills in. */
+.format__blank { grid-column: 1 / -1; height: 1.6rem; border-bottom: 2px solid var(--c-mist); }
+.format__example { grid-column: 1 / -1; font-size: 0.8rem; color: var(--c-text-muted); }
+.format__tip { margin-top: var(--space-3); font-size: 0.85rem; color: var(--c-text-secondary); text-align: center; }
+
+.format__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-4); }
+.format__actions .btn { min-height: 48px; }
+.format__status { text-align: center; min-height: 1.5em; margin-top: var(--space-3); color: var(--c-verified); font-weight: 600; }
+
+@media (min-width: 640px) {
+  .format__row { grid-template-columns: 11rem 1fr; align-items: end; }
+  .format__label { grid-column: 1; }
+  .format__blank { grid-column: 2; }
+  .format__example { grid-column: 2; }
+}

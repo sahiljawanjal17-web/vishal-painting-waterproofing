@@ -1,0 +1,192 @@
+section {
+  padding: var(--space-8) 0;
+}
+
+section:nth-child(even) {
+  background-color: var(--c-bg-card);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+/* Hero */
+.hero-section {
+  text-align: center;
+  padding: var(--space-12) 0 var(--space-6);
+}
+
+.hero-title {
+  margin-bottom: var(--space-3);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--c-text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--space-5);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.trust-micro {
+  font-size: 0.9rem;
+  color: var(--c-text-muted);
+  margin-bottom: var(--space-8);
+}
+
+/* Hero slider slot (component styles live in components/before-after-slider.css) */
+.hero-slider {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.load-error {
+  text-align: center;
+  color: var(--c-text-secondary);
+  padding: var(--space-5) 0;
+}
+
+/* Trust Bar */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.trust-item .counter {
+  font-size: 2.5rem;
+  font-family: var(--font-serif);
+  display: inline-block;
+  margin-bottom: var(--space-1);
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.service-card {
+  background: var(--c-bg-raised);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--c-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.service-card h3 {
+  margin-bottom: var(--space-2);
+}
+
+.service-card p {
+  color: var(--c-text-secondary);
+  margin-bottom: var(--space-4);
+  font-size: 0.95rem;
+}
+
+/* Estimator */
+.estimator-box {
+  background: var(--c-bg-raised);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--c-border);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.estimator-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.estimator-inputs label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--c-text-secondary);
+}
+
+.estimator-inputs input,
+.estimator-inputs select {
+  margin-top: var(--space-1);
+  padding: 0.5rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+}
+
+.estimator-output {
+  text-align: center;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--c-border-light);
+}
+
+.est-price {
+  font-size: 2rem;
+  font-family: var(--font-serif);
+  margin-bottom: var(--space-1);
+}
+
+.est-note {
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.team-card {
+  text-align: center;
+  background: var(--c-bg-raised);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--c-border);
+}
+
+.team-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-3);
+}
+
+.team-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: var(--space-6) 0;
+  background: var(--c-brand);
+  color: var(--c-on-brand);
+}
+
+.site-footer .brand {
+  margin-bottom: var(--space-2);
+}
+
+.site-footer p {
+  font-size: 0.8rem;
+  color: rgba(250, 246, 239, 0.65);
+}
+
+section[id] { scroll-margin-top: 64px; }

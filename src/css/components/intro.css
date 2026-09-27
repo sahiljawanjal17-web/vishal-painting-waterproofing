@@ -1,0 +1,134 @@
+/* Full-screen intro: paint-pour video + wordmark. Only exists visually while <html class="intro-on">.
+   Timing is CSS-driven (--intro-ms); intro.js just listens for the progress bar's animationend. */
+.intro {
+  --intro-ms: 6500ms;
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background: var(--c-bg-surface);
+  color: var(--c-text-primary);
+  clip-path: ellipse(150% 130% at 50% 0%);
+  transition: clip-path 900ms cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.intro-on .intro { display: block; }
+.intro-on { overflow: hidden; }
+
+/* Wipes upward with a curved edge, like a roller pulling off the wall. */
+.intro--leave { clip-path: ellipse(150% 0% at 50% 0%); pointer-events: none; }
+
+.intro__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: intro-settle 7s ease-out both;
+}
+
+/* Keeps text readable over the pale video without hiding it. */
+.intro__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 48%, rgba(245, 241, 234, 0.82), rgba(245, 241, 234, 0.35) 65%, transparent),
+    linear-gradient(to top, rgba(58, 74, 92, 0.28), transparent 35%);
+}
+
+.intro__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.intro__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  animation: intro-fade 900ms 500ms both;
+}
+
+.intro__mark {
+  display: flex;
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 14vw, 8.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--c-brand);
+  animation: intro-track 2200ms 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.intro__mark span {
+  display: inline-block;
+  animation: intro-rise 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(700ms + var(--i) * 90ms);
+}
+
+.intro__rule {
+  width: min(16rem, 55vw);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--c-accent), transparent);
+  transform-origin: center;
+  animation: intro-draw 1000ms 1500ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.intro__tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 3.6vw, 1.6rem);
+  color: var(--c-text-secondary);
+  animation: intro-fade 1000ms 1900ms both;
+}
+
+.intro__skip {
+  position: absolute;
+  right: var(--space-4);
+  bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--c-brand);
+  border-radius: var(--radius-full);
+  background: rgba(251, 249, 245, 0.7);
+  backdrop-filter: blur(6px);
+  color: var(--c-brand);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  animation: intro-fade 600ms 800ms both;
+}
+
+.intro__skip:hover { background: var(--c-brand); color: var(--c-on-brand); }
+.intro__skip:focus-visible { outline: 3px solid var(--c-accent); outline-offset: 3px; }
+
+.intro__progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--c-accent);
+  transform-origin: left;
+  animation: intro-progress var(--intro-ms) linear both;
+}
+
+@keyframes intro-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes intro-settle { from { transform: scale(1.08); } to { transform: scale(1); } }
+@keyframes intro-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes intro-rise { from { opacity: 0; transform: translateY(60%); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes intro-track { from { letter-spacing: 0.18em; } to { letter-spacing: 0.06em; } }
+@keyframes intro-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Portrait phones: the 16:9 clip is cropped to the middle by object-fit; nudge focus to the droplets/paint edge. */
+@media (max-aspect-ratio: 1/1) {
+  .intro__video { object-position: 40% 50%; }
+}

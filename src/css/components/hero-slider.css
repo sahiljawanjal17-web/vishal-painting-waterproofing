@@ -1,0 +1,164 @@
+/* Hero slider chrome (hero-slider.js): tool badge, prev/next, progress dots, pause. */
+.ba-hero {
+  --ba-interval: 5s; /* time each project stays on screen while auto-scrolling */
+}
+
+.ba-frame {
+  position: relative;
+}
+
+.ba-stage {
+  transition: opacity 0.18s ease; /* keep in sync with FADE_MS in hero-slider.js */
+}
+
+.ba-stage--fading {
+  opacity: 0;
+}
+
+/* Top-left badge showing the service's tool icon. */
+.ba-badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--c-bg-raised);
+  color: var(--c-brand);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  pointer-events: none; /* never block dragging the slider */
+}
+
+.ba-badge__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Controls row: [‹] dots [›] [pause] */
+.ba-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  margin-top: var(--space-3);
+}
+
+.ba-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-full);
+  background: var(--c-bg-raised);
+  color: var(--c-text-primary);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.ba-nav:hover {
+  border-color: var(--c-text-primary);
+}
+
+.ba-nav:focus-visible,
+.ba-dot:focus-visible {
+  outline: 3px solid var(--c-brand);
+  outline-offset: 2px;
+}
+
+.ba-nav .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.ba-nav--toggle {
+  margin-left: var(--space-2);
+}
+
+.ba-dots {
+  display: flex;
+  align-items: center;
+}
+
+/* 44px tap target; the visible dot is 10px, the active one a 28px pill that fills as time runs. */
+.ba-dot {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ba-dot::before,
+.ba-dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10px;
+  margin-top: -5px;
+  border-radius: var(--radius-full);
+}
+
+.ba-dot::before {
+  width: 10px;
+  margin-left: -5px;
+  background: var(--c-text-secondary); /* ≥3:1 on white (non-text contrast) */
+}
+
+.ba-dot--active::before,
+.ba-dot--active::after {
+  width: 28px;
+  margin-left: -14px;
+}
+
+.ba-dot--active::before {
+  background: var(--c-border);
+}
+
+.ba-dot:not(.ba-dot--active)::after {
+  display: none;
+}
+
+.ba-dot--active::after {
+  background: var(--c-brand);
+  transform-origin: left center;
+  animation: ba-fill var(--ba-interval) linear forwards;
+}
+
+@keyframes ba-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Paused: hero scrolled away, tab hidden, mouse over it, or keyboard focus inside it. */
+.ba-hero--offscreen .ba-dot--active::after,
+.ba-hero--hidden .ba-dot--active::after,
+.ba-hero:has(:focus-visible) .ba-dot--active::after {
+  animation-play-state: paused;
+}
+
+@media (hover: hover) {
+  .ba-hero:hover .ba-dot--active::after {
+    animation-play-state: paused;
+  }
+}
+
+/* Stopped (pause button, dragged, or reduced motion): no timer, solid pill. */
+.ba-hero--stopped .ba-dot--active::after {
+  animation: none;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ba-stage { transition: none; }
+  .ba-dot--active::after { animation: none; transform: none; }
+}

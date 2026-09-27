@@ -1,0 +1,64 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+/* display:inline-flex above would otherwise beat the UA `[hidden]` rule. */
+.btn[hidden] {
+  display: none;
+}
+
+.btn-primary {
+  background-color: var(--c-brand);
+  color: var(--c-on-brand);
+}
+
+.btn-primary:hover {
+  background-color: var(--c-brand-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--c-border);
+  color: var(--c-text-primary);
+}
+
+.btn-outline:hover {
+  border-color: var(--c-text-primary);
+}
+
+.btn-whatsapp {
+  background-color: var(--c-whatsapp);
+  color: var(--c-on-brand);
+  font-weight: 600;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--c-whatsapp-hover);
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  min-height: 44px; /* tap target */
+  font-size: 0.9rem;
+}
+
+.btn .icon {
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.4em;
+  flex: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--c-brand);
+  outline-offset: 2px;
+}

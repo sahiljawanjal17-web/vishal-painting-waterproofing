@@ -1,0 +1,78 @@
+.video-reel {
+  display: grid;
+  /* Cards cap at 480px so a single video doesn't stretch across the page. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 480px));
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+/* Mobile: horizontal scroll-snap reel. */
+@media (max-width: 639px) {
+  .video-reel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-2);
+  }
+
+  .video-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}
+
+.video-card__frame {
+  position: relative;
+  aspect-ratio: var(--video-ratio, 16 / 9);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+}
+
+.video-card__frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: var(--radius-full);
+  background: rgba(251, 249, 245, 0.92);
+  color: var(--c-brand);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.video-card__play:hover { transform: translate(-50%, -50%) scale(1.06); }
+
+.video-card__play:focus-visible {
+  outline: 3px solid var(--c-on-brand);
+  outline-offset: 3px;
+}
+
+.video-card__play[hidden] { display: none; }
+
+.video-card__play-icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px; /* optical centering of the triangle */
+}
+
+.video-card figcaption {
+  margin-top: var(--space-2);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--c-text-secondary);
+}

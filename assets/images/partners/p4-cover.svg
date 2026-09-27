@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6ecf5"/><stop offset="1" stop-color="#8ea6c8"/></linearGradient>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7" fill="#000" opacity="0.05"/><circle cx="4" cy="4" r="0.7" fill="#fff" opacity="0.08"/></pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grain)"/>
+  <ellipse cx="600" cy="720" rx="420" ry="34" fill="#000" opacity="0.10"/>
+  <rect x="330" y="150" width="540" height="560" rx="14" fill="#f8f4ec" stroke="#3a4a63" stroke-width="10"/>
+  <g fill="#9bb4d6" stroke="#3a4a63" stroke-width="6">
+    <rect x="380" y="200" width="90" height="110" rx="6"/><rect x="555" y="200" width="90" height="110" rx="6"/><rect x="730" y="200" width="90" height="110" rx="6"/>
+    <rect x="380" y="370" width="90" height="110" rx="6"/><rect x="555" y="370" width="90" height="110" rx="6"/><rect x="730" y="370" width="90" height="110" rx="6"/>
+    <rect x="555" y="550" width="90" height="160" rx="6" fill="#6f4f36"/>
+  </g>
+  <g stroke="#e0862a" stroke-width="12" stroke-linecap="round" fill="none">
+    <path d="M250 710V120M950 710V120M250 300H950M250 500H950M250 300 950 500M250 500 950 300"/>
+  </g>
+  <g fill="#e0862a"><rect x="230" y="700" width="40" height="14" rx="4"/><rect x="930" y="700" width="40" height="14" rx="4"/></g>
+</svg>

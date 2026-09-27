@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Painting & Waterproofing</title>
+  <meta name="description" content="Flawless Walls. Leak-Proof Homes.">
+  
+  <meta name="theme-color" content="#f5f1ea">
+  <!-- Decides synchronously (before first paint) whether the intro shows: once per session, never for reduced-motion. ?intro=1 forces it. -->
+  <script>
+    try {
+      var force = /[?&]intro=1/.test(location.search);
+      if ((force || !sessionStorage.getItem('introSeen')) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('intro-on');
+      }
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="src/css/main.css">
+  <!-- Hero slider is built by JS after data loads; preload the first "after" image so LCP isn't waiting on that -->
+  <link rel="preload" as="image" href="assets/images/before-after/after_1.jpg" fetchpriority="high">
+</head>
+<body>
+
+  <!-- Intro (paint-pour video). Hidden unless <html class="intro-on">; see intro.js -->
+  <div class="intro" id="intro" role="region" data-label="introLabel" data-label-attr="aria-label">
+    <video class="intro__video" muted playsinline autoplay preload="auto" aria-hidden="true" tabindex="-1" poster="assets/video/intro-poster.jpg">
+      <source src="assets/video/intro.webm" type="video/webm">
+      <source src="assets/video/intro.mp4" type="video/mp4">
+    </video>
+    <div class="intro__veil"></div>
+    <div class="intro__content">
+      <p class="intro__eyebrow" data-label="introEyebrow"></p>
+      <p class="intro__mark" aria-hidden="true">
+        <span style="--i:0">V</span><span style="--i:1">I</span><span style="--i:2">S</span><span style="--i:3">H</span><span style="--i:4">A</span><span style="--i:5">L</span>
+      </p>
+      <span class="intro__rule"></span>
+      <p class="intro__tagline" data-label="introTagline"></p>
+    </div>
+    <button type="button" class="intro__skip" data-label="introSkip"></button>
+    <span class="intro__progress"></span>
+  </div>
+
+  <!-- Fixed looping paint video behind the whole page (site-bg.js): stays visible while scrolling -->
+  <div class="site-bg" id="site-bg">
+    <video class="site-bg__video" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true" poster="assets/video/hero-poster.jpg">
+      <source src="assets/video/hero-fast.webm" type="video/webm">
+      <source src="assets/video/hero-fast.mp4" type="video/mp4">
+    </video>
+    <div class="site-bg__veil"></div>
+  </div>
+  <button type="button" class="site-bg__toggle" id="site-bg-toggle">
+    <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+    <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+  </button>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <strong>VISHAL</strong> · <span data-label="brandTail">Painting & Waterproofing</span>
+      </div>
+      <div class="header-actions">
+        <a href="#services" class="back-link" data-label="navServices">Services</a>
+        <a href="#estimator" class="back-link" data-label="navEstimate">Estimate</a>
+        <a href="#team" class="back-link" data-label="navTeam">Team</a>
+        <button type="button" class="icon-btn" id="format-open" data-label="fmtOpen" data-label-attr="aria-label" data-label-title="fmtOpen" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="2.5" width="8" height="4" rx="1"/><path d="M16 4.5h2a2 2 0 0 1 2 2V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6.5a2 2 0 0 1 2-2h2"/><path d="M8 12l1.5 1.5L12 11M8 17l1.5 1.5L12 16M14 12.5h3M14 17.5h3"/></svg>
+        </button>
+        <div class="lang-toggle-group" role="group" data-label="langGroup" data-label-attr="aria-label" aria-label="Language">
+          <button class="lang-btn active" aria-pressed="true" data-lang="en" lang="en">EN</button>
+          <button class="lang-btn" aria-pressed="false" data-lang="hi" lang="hi">हिं</button>
+          <button class="lang-btn" aria-pressed="false" data-lang="mr" lang="mr">मरा</button>
+        </div>
+        <button class="btn btn-primary" data-scroll="#booking" data-label="bookFree">Book Free Inspection</button>
+        <button type="button" class="icon-btn nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" data-label="navMenu" data-label-attr="aria-label" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Phone menu (hamburger drawer, nav-drawer.js). Off-canvas and inert until opened. -->
+  <div class="nav-drawer" id="nav-drawer" inert>
+    <div class="nav-drawer__backdrop" data-nav-close></div>
+    <nav class="nav-drawer__panel" aria-label="Menu" data-label="navMenu" data-label-attr="aria-label">
+      <button type="button" class="icon-btn nav-drawer__close" data-nav-close data-label="close" data-label-attr="aria-label" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <ul class="nav-drawer__list">
+        <li><a href="#services" data-nav-close data-label="navServices">Services</a></li>
+        <li><a href="#estimator" data-nav-close data-label="navEstimate">Estimate</a></li>
+        <li><a href="#team" data-nav-close data-label="navTeam">Team</a></li>
+        <li><a href="#gallery" data-nav-close data-label="galleryTitle">Our Work</a></li>
+        <li><a href="#reviews" data-nav-close data-label="reviewsTitle">Customer reviews</a></li>
+        <li><a href="#location" data-nav-close data-label="locationTitle">Location</a></li>
+      </ul>
+      <button type="button" class="btn btn-primary nav-drawer__cta" data-nav-close data-scroll="#booking" data-label="bookFree">Book Free Inspection</button>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section with Before/After Slider -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <h1 class="hero-title"><span data-label="heroA">Flawless Walls.</span><br><span data-label="heroB">Leak-Proof Homes.</span></h1>
+        <p class="hero-subtitle" data-label="heroSub">Premium painting & waterproofing services with guaranteed mirror-smooth finishes.</p>
+        
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-scroll="#booking" data-label="bookFree">Book Free Inspection</button>
+          <button class="btn btn-outline" data-scroll="#estimator" data-label="heroEstimate">Get Instant Estimate</button>
+        </div>
+        
+        <div class="trust-micro">
+          <span data-label="trustMicro">★ 4.9 · 500+ homes · Free site visit</span>
+        </div>
+
+        <!-- Filled by initHeroSlider from media.json (featured before/after pairs) -->
+        <div class="hero-slider" id="hero-slider"></div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section id="trust-bar" class="trust-section">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="counter">10</span>+<br><span data-label="trustYears">Years Experience</span></div>
+        <div class="trust-item"><span class="counter">500</span>+<br><span data-label="trustProjects">Projects Completed</span></div>
+        <div class="trust-item"><span class="counter">4.9</span>/5<br><span data-label="trustRating">Average Rating</span></div>
+        <div class="trust-item"><span class="counter">5</span> <span data-label="unitYrs">Yrs</span><br><span data-label="trustWarranty">Waterproofing Warranty</span></div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2 data-label="servicesTitle">Our Services</h2>
+        <div class="services-grid">
+          <!-- Interior Painting -->
+          <div class="service-card">
+            <h3 data-label="svcInteriorName">Interior Painting</h3>
+            <p data-label="svcInteriorDesc">Premium emulsion finishes for vibrant living spaces.</p>
+            <button class="btn btn-outline btn-sm" data-scroll="#estimator" data-label="estimateBtn">Estimate</button>
+          </div>
+          <!-- Exterior Painting -->
+          <div class="service-card">
+            <h3 data-label="svcExteriorName">Exterior Painting</h3>
+            <p data-label="svcExteriorDesc">Weather-resistant coating for lasting protection.</p>
+            <button class="btn btn-outline btn-sm" data-scroll="#estimator" data-label="estimateBtn">Estimate</button>
+          </div>
+          <!-- Wall Putty -->
+          <div class="service-card">
+            <h3 data-label="svcPuttyName">Wall Putty & Leveling</h3>
+            <p data-label="svcPuttyDesc">Mirror-smooth surfaces. No shortcuts.</p>
+            <button class="btn btn-outline btn-sm" data-scroll="#estimator" data-label="estimateBtn">Estimate</button>
+          </div>
+          <!-- Terrace Waterproofing -->
+          <div class="service-card">
+            <h3 data-label="svcTerraceName">Terrace Waterproofing</h3>
+            <p data-label="svcTerraceDesc">Leak-proof homes with multi-layer sealants.</p>
+            <button class="btn btn-outline btn-sm" data-scroll="#estimator" data-label="estimateBtn">Estimate</button>
+          </div>
+          <!-- Crack Repair -->
+          <div class="service-card">
+            <h3 data-label="svcCrackName">Crack Repair</h3>
+            <p data-label="svcCrackDesc">Structural filling and surface restoration.</p>
+            <button class="btn btn-outline btn-sm" data-scroll="#estimator" data-label="estimateBtn">Estimate</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estimator -->
+    <section id="estimator" class="estimator-section">
+      <div class="container">
+        <h2 data-label="estimatorTitle">Instant Cost Estimator</h2>
+        <div class="estimator-box">
+          <div class="estimator-inputs">
+            <label><span data-label="estArea">Area (sq.ft)</span> <input type="number" id="est-area" value="1000"></label>
+            <label><span data-label="estSurface">Surface</span>
+              <select id="est-surface">
+                <option>Interior Walls</option>
+                <option>Exterior Walls</option>
+                <option>Terrace/Roof</option>
+              </select>
+            </label>
+            <label><span data-label="estTier">Tier</span>
+              <select id="est-tier">
+                <option>Distemper</option>
+                <option>Premium Emulsion</option>
+                <option>Luxury Royal</option>
+                <option>Waterproofing</option>
+              </select>
+            </label>
+          </div>
+          <div class="estimator-output" aria-live="polite">
+            <div class="est-price">Estimated: ₹20,000 – ₹25,000</div>
+            <p class="est-note">Final quote after free on-site inspection.</p>
+            <button class="btn btn-whatsapp">Book Estimate via WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team / Partners -->
+    <section id="team" class="team-section">
+      <div class="container">
+        <h2 data-label="teamTitle">Meet Our Specialists</h2>
+        <!-- Cards rendered by initPartnerCards from partners.json -->
+        <div class="team-grid" id="team-grid"></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <h2 data-label="galleryTitle">Our Work</h2>
+        <div id="gallery-root"></div>
+      </div>
+    </section>
+
+    <!-- Video Reel -->
+    <section id="videos" class="videos-section">
+      <div class="container">
+        <h2 data-label="videosTitle">Work in Motion</h2>
+        <div class="video-reel" id="video-reel"></div>
+      </div>
+    </section>
+
+    <!-- Reviews: website-wide, one auto-scrolling row -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        <h2 data-label="reviewsTitle">Customer reviews</h2>
+        <div id="reviews-root"></div>
+      </div>
+    </section>
+
+    <!-- Location: one business location for everyone; customers can send theirs on WhatsApp -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <h2 data-label="locationTitle">Location</h2>
+        <div id="location-root"></div>
+      </div>
+    </section>
+
+    <!-- Payment options (informational) -->
+    <section id="payments" class="payments-section">
+      <div class="container">
+        <h2 data-label="paymentsTitle">Payment options</h2>
+        <div id="payments-root"></div>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <section id="offers" class="offers-section">
+      <div class="container">
+        <h2 data-label="offersTitle">Offers</h2>
+        <div id="offers-root"></div>
+      </div>
+    </section>
+
+    <!-- Booking wizard: 7 steps, rendered by booking-wizard.js -->
+    <section id="booking" class="booking-section">
+      <div class="container">
+        <h2 data-label="bookingTitle">Book Free Inspection</h2>
+        <div class="wizard" id="booking-wizard"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick booking format popup, opened by the clipboard icon in the header (booking-format.js) -->
+  <dialog class="format-dialog" id="format-dialog" aria-labelledby="format-title">
+    <div class="format-dialog__head">
+      <h2 id="format-title" data-label="fmtTitle">Quick Booking Format</h2>
+      <button type="button" class="format-dialog__close" data-label="close" data-label-attr="aria-label" aria-label="Close">&times;</button>
+    </div>
+    <p class="format-dialog__lead" data-label="fmtSub"></p>
+    <div class="format" id="format-root"></div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="brand">VISHAL · <span data-label="brandTail">Painting & Waterproofing</span></div>
+      <p data-label="footerRights">© 2026 Vishal Painting & Waterproofing Services</p>
+    </div>
+  </footer>
+
+  <!-- Quick contact: Call + WhatsApp, retargets to the selected partner -->
+  <aside id="contact-dock" aria-label="Quick contact"></aside>
+
+  <!-- store/event-bus are classic scripts exposing window.store / window.ebus; they must run before the module -->
+  <script src="src/js/core/store.js"></script>
+  <script src="src/js/core/event-bus.js"></script>
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
+

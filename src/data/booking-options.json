@@ -1,0 +1,173 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-09-24",
+  "serviceTypes": [
+    "interior-painting",
+    "exterior-painting",
+    "wall-putty",
+    "terrace-waterproofing",
+    "crack-repair"
+  ],
+  "propertyScopes": [
+    {
+      "id": "1bhk",
+      "label": {
+        "en": "1 BHK",
+        "hi": "1 BHK",
+        "mr": "1 BHK"
+      },
+      "defaultSqft": 450
+    },
+    {
+      "id": "2bhk",
+      "label": {
+        "en": "2 BHK",
+        "hi": "2 BHK",
+        "mr": "2 BHK"
+      },
+      "defaultSqft": 750
+    },
+    {
+      "id": "3bhk",
+      "label": {
+        "en": "3 BHK",
+        "hi": "3 BHK",
+        "mr": "3 BHK"
+      },
+      "defaultSqft": 1100
+    },
+    {
+      "id": "row-house",
+      "label": {
+        "en": "Row House",
+        "hi": "रो हाउस",
+        "mr": "रो हाऊस"
+      },
+      "defaultSqft": 1400
+    },
+    {
+      "id": "commercial",
+      "label": {
+        "en": "Commercial",
+        "hi": "कमर्शियल",
+        "mr": "व्यावसायिक"
+      },
+      "defaultSqft": null
+    },
+    {
+      "id": "custom",
+      "label": {
+        "en": "Custom (sq.ft)",
+        "hi": "कस्टम (वर्ग फ़ुट)",
+        "mr": "इतर (चौ. फूट)"
+      },
+      "defaultSqft": null
+    }
+  ],
+  "wallConditions": [
+    {
+      "id": "raw-plaster",
+      "label": {
+        "en": "Raw plaster (new wall)",
+        "hi": "कच्चा प्लास्टर (नई दीवार)",
+        "mr": "कच्चे प्लास्टर (नवीन भिंत)"
+      },
+      "hint": {
+        "en": "Needs putty + primer first",
+        "hi": "पहले पुट्टी + प्राइमर चाहिए",
+        "mr": "आधी पुट्टी + प्रायमर लागेल"
+      },
+      "suggestsServiceIds": [
+        "wall-putty"
+      ]
+    },
+    {
+      "id": "peeling-flaking",
+      "label": {
+        "en": "Peeling / flaking paint",
+        "hi": "उखड़ता / झड़ता पेंट",
+        "mr": "रंग निघतो / खपल्या पडतात"
+      },
+      "hint": {
+        "en": "Scraping & repair needed",
+        "hi": "घिसाई व मरम्मत ज़रूरी",
+        "mr": "घासणे व दुरुस्ती आवश्यक"
+      },
+      "suggestsServiceIds": [
+        "wall-putty",
+        "crack-repair"
+      ]
+    },
+    {
+      "id": "dampness-leakage",
+      "label": {
+        "en": "Heavy dampness / leakage",
+        "hi": "ज़्यादा सीलन / गळती",
+        "mr": "खूप ओलावा / गळती"
+      },
+      "hint": {
+        "en": "We recommend waterproofing",
+        "hi": "वॉटरप्रूफिंग की सलाह",
+        "mr": "वॉटरप्रूफिंगची शिफारस"
+      },
+      "suggestsServiceIds": [
+        "terrace-waterproofing"
+      ]
+    },
+    {
+      "id": "ready-repaint",
+      "label": {
+        "en": "Good condition, ready for repaint",
+        "hi": "अच्छी हालत, सिर्फ़ दोबारा पेंट",
+        "mr": "चांगल्या स्थितीत, फक्त पुन्हा रंग"
+      },
+      "hint": {
+        "en": "Quick refresh",
+        "hi": "जल्दी नया रूप",
+        "mr": "झटपट नवा लुक"
+      },
+      "suggestsServiceIds": []
+    }
+  ],
+  "exclusiveConditions": [
+    [
+      "raw-plaster",
+      "ready-repaint"
+    ]
+  ],
+  "timeSlots": [
+    {
+      "id": "morning",
+      "label": {
+        "en": "Morning (9 AM – 12 PM)",
+        "hi": "सुबह (9 – 12)",
+        "mr": "सकाळी (9 – 12)"
+      },
+      "start": "09:00",
+      "end": "12:00"
+    },
+    {
+      "id": "afternoon",
+      "label": {
+        "en": "Afternoon (12 – 3 PM)",
+        "hi": "दोपहर (12 – 3)",
+        "mr": "दुपारी (12 – 3)"
+      },
+      "start": "12:00",
+      "end": "15:00"
+    },
+    {
+      "id": "evening",
+      "label": {
+        "en": "Evening (3 – 6 PM)",
+        "hi": "शाम (3 – 6)",
+        "mr": "संध्याकाळी (3 – 6)"
+      },
+      "start": "15:00",
+      "end": "18:00"
+    }
+  ],
+  "leadDaysMin": 1,
+  "maxDaysAhead": 90,
+  "blockedWeekdays": []
+}

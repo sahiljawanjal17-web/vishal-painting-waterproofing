@@ -1,0 +1,162 @@
+{
+  "version": "1.1.0",
+  "updated": "2026-09-24",
+  "_note": "PLACEHOLDER MEDIA. The before/after JPGs are unrelated landscape stock photos (viewed; no faces). Renderer skips any item where faceless_verified !== true.",
+  "beforeAfter": [
+    {
+      "id": "ba-001",
+      "title": {
+        "en": "Living room colour refresh",
+        "hi": "लिविंग रूम कलर रिफ़्रेश",
+        "mr": "दिवाणखान्याला नवा रंग"
+      },
+      "caption": {
+        "en": "Living room · 2-coat luxury emulsion",
+        "hi": "लिविंग रूम · 2 कोट लक्ज़री इमल्शन",
+        "mr": "दिवाणखाना · 2 कोट लक्झरी इमल्शन"
+      },
+      "before": {
+        "src": "assets/images/before-after/before_1.jpg"
+      },
+      "after": {
+        "src": "assets/images/before-after/after_1.jpg"
+      },
+      "serviceId": "interior-painting",
+      "partnerId": "p1",
+      "tags": [
+        "interior"
+      ],
+      "featured": true,
+      "placeholder": true,
+      "faceless_verified": true,
+      "width": 800,
+      "height": 600
+    },
+    {
+      "id": "ba-002",
+      "title": {
+        "en": "Terrace waterproofing",
+        "hi": "टैरेस वॉटरप्रूफिंग",
+        "mr": "टेरेस वॉटरप्रूफिंग"
+      },
+      "caption": {
+        "en": "Terrace · multi-layer membrane",
+        "hi": "टैरेस · बहु-परत मेम्ब्रेन",
+        "mr": "टेरेस · बहुस्तरीय मेम्ब्रेन"
+      },
+      "before": {
+        "src": "assets/images/before-after/before_2.jpg"
+      },
+      "after": {
+        "src": "assets/images/before-after/after_2.jpg"
+      },
+      "serviceId": "terrace-waterproofing",
+      "partnerId": "p2",
+      "tags": [
+        "waterproofing",
+        "exterior"
+      ],
+      "featured": true,
+      "placeholder": true,
+      "faceless_verified": true,
+      "width": 800,
+      "height": 600
+    },
+    {
+      "id": "ba-003",
+      "title": {
+        "en": "Mirror-smooth putty finish",
+        "hi": "शीशे जैसी चिकनी पुट्टी फ़िनिश",
+        "mr": "आरशासारखी गुळगुळीत पुट्टी फिनिश"
+      },
+      "caption": {
+        "en": "New flat · 2-coat putty + primer",
+        "hi": "नया फ़्लैट · 2 कोट पुट्टी + प्राइमर",
+        "mr": "नवीन फ्लॅट · 2 कोट पुट्टी + प्रायमर"
+      },
+      "before": {
+        "src": "assets/images/before-after/before_3.jpg"
+      },
+      "after": {
+        "src": "assets/images/before-after/after_3.jpg"
+      },
+      "serviceId": "wall-putty",
+      "partnerId": "p3",
+      "tags": [
+        "putty",
+        "interior"
+      ],
+      "featured": true,
+      "placeholder": true,
+      "faceless_verified": true,
+      "width": 800,
+      "height": 600
+    },
+    {
+      "id": "ba-004",
+      "title": {
+        "en": "Exterior facade repaint",
+        "hi": "एक्सटीरियर फ़साड री-पेंट",
+        "mr": "बाह्य दर्शनी भागाचे पुन्हा रंगकाम"
+      },
+      "caption": {
+        "en": "Building facade · weather-proof topcoat",
+        "hi": "बिल्डिंग फ़साड · वेदर-प्रूफ टॉपकोट",
+        "mr": "इमारतीचा दर्शनी भाग · हवामान-प्रतिरोधक टॉपकोट"
+      },
+      "before": {
+        "src": "assets/images/before-after/before_4.jpg"
+      },
+      "after": {
+        "src": "assets/images/before-after/after_4.jpg"
+      },
+      "serviceId": "exterior-painting",
+      "partnerId": "p4",
+      "tags": [
+        "exterior"
+      ],
+      "featured": true,
+      "placeholder": true,
+      "faceless_verified": true,
+      "width": 800,
+      "height": 600
+    }
+  ],
+  "videos": [
+    {
+      "id": "v-001",
+      "provider": "local",
+      "src": "assets/video/sample_video_1.mp4",
+      "aspect": "20:11",
+      "title": {
+        "en": "Roller transformation",
+        "hi": "रोलर से बदलाव",
+        "mr": "रोलरने कायापालट"
+      },
+      "category": "roller",
+      "placeholder": true,
+      "source": "third-party",
+      "faceless_verified": true,
+      "faceless_note": "Checked 8 frames across 10s on 2026-09-24: 3D-animated cartoon, no human faces. Unrelated to painting.",
+      "license_note": "Appears to be 'Big Buck Bunny' (Blender Foundation, CC BY 3.0) - unconfirmed. Needs attribution, or replace with own footage before launch.",
+      "source_channel": null,
+      "thumbnail": "assets/images/gallery/v-001-thumb.jpg"
+    },
+    {
+      "id": "v-002",
+      "provider": "local",
+      "src": "assets/video/sample_video_2.mp4",
+      "aspect": "4:3",
+      "title": {
+        "en": "Mirror-smooth putty finish",
+        "hi": "शीशे जैसी चिकनी पुट्टी फ़िनिश",
+        "mr": "आरशासारखी गुळगुळीत पुट्टी फिनिश"
+      },
+      "category": "putty",
+      "placeholder": true,
+      "source": "third-party",
+      "faceless_verified": false,
+      "faceless_note": "REJECTED 2026-09-24: black-and-white film clip with several clearly visible human faces. Replace with faceless footage."
+    }
+  ]
+}

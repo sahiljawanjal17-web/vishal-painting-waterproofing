@@ -1,0 +1,333 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-09-24",
+  "items": [
+    {
+      "id": "interior-painting",
+      "title": {
+        "en": "Interior Painting",
+        "hi": "इंटीरियर पेंटिंग",
+        "mr": "इंटिरियर पेंटिंग"
+      },
+      "shortDesc": {
+        "en": "Luxury finishes and precise colour matching for every room.",
+        "hi": "हर कमरे के लिए लक्ज़री फ़िनिश और सटीक कलर मैचिंग।",
+        "mr": "प्रत्येक खोलीसाठी लक्झरी फिनिश आणि अचूक रंगजुळणी."
+      },
+      "longDesc": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "features": [
+        {
+          "en": "Premium & luxury emulsions",
+          "hi": "प्रीमियम व लक्ज़री इमल्शन",
+          "mr": "प्रीमियम व लक्झरी इमल्शन"
+        },
+        {
+          "en": "Computerised colour matching",
+          "hi": "कंप्यूटराइज़्ड कलर मैचिंग",
+          "mr": "संगणकीकृत रंगजुळणी"
+        },
+        {
+          "en": "Furniture & floor protection",
+          "hi": "फ़र्नीचर व फ़र्श की सुरक्षा",
+          "mr": "फर्निचर व फरशीचे संरक्षण"
+        }
+      ],
+      "icon": "icon-roller",
+      "surface": [
+        "interior"
+      ],
+      "leadPartnerId": "p1",
+      "supportPartnerIds": [
+        "p3"
+      ],
+      "startingRatePerSqft": 0,
+      "applicableTiers": [
+        "distemper",
+        "premium-emulsion",
+        "luxury-royal"
+      ],
+      "typicalDuration": {
+        "en": "4–6 days for a 2BHK",
+        "hi": "2BHK के लिए 4–6 दिन",
+        "mr": "2BHK साठी 4–6 दिवस"
+      },
+      "warranty": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "image": {
+        "src": "assets/images/services/interior.webp",
+        "alt": {
+          "en": "Freshly painted living room wall",
+          "hi": "नई पेंट हुई लिविंग रूम की दीवार",
+          "mr": "नुकतीच रंगवलेली दिवाणखान्याची भिंत"
+        }
+      },
+      "order": 1
+    },
+    {
+      "id": "exterior-painting",
+      "title": {
+        "en": "Exterior Painting",
+        "hi": "एक्सटीरियर पेंटिंग",
+        "mr": "एक्सटिरियर पेंटिंग"
+      },
+      "shortDesc": {
+        "en": "Weather-proof protective coats for homes and buildings.",
+        "hi": "घरों व इमारतों के लिए मौसम-रोधी कोटिंग।",
+        "mr": "घरे व इमारतींसाठी हवामान-प्रतिरोधक संरक्षक कोटिंग."
+      },
+      "longDesc": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "features": [
+        {
+          "en": "UV & rain resistant paints",
+          "hi": "धूप व बारिश रोधी पेंट",
+          "mr": "UV व पावसाला प्रतिरोधक रंग"
+        },
+        {
+          "en": "Safe scaffolding for high-rise",
+          "hi": "ऊँची इमारतों के लिए सुरक्षित स्कैफ़ोल्डिंग",
+          "mr": "उंच इमारतींसाठी सुरक्षित मचान"
+        },
+        {
+          "en": "Anti-algae & anti-fungal",
+          "hi": "काई व फ़ंगस रोधी",
+          "mr": "शेवाळ व बुरशीरोधक"
+        }
+      ],
+      "icon": "icon-building",
+      "surface": [
+        "exterior"
+      ],
+      "leadPartnerId": "p4",
+      "supportPartnerIds": [
+        "p2"
+      ],
+      "startingRatePerSqft": 0,
+      "applicableTiers": [
+        "premium-emulsion",
+        "luxury-royal",
+        "waterproofing"
+      ],
+      "typicalDuration": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "warranty": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "image": {
+        "src": "assets/images/services/exterior.webp",
+        "alt": {
+          "en": "Painted building exterior",
+          "hi": "पेंट की हुई इमारत का बाहरी भाग",
+          "mr": "रंगवलेली इमारतीची बाह्य भिंत"
+        }
+      },
+      "order": 2
+    },
+    {
+      "id": "wall-putty",
+      "title": {
+        "en": "Wall Putty & Leveling",
+        "hi": "वॉल पुट्टी व लेवलिंग",
+        "mr": "वॉल पुट्टी व लेव्हलिंग"
+      },
+      "shortDesc": {
+        "en": "Double-coat putty for a mirror-smooth base.",
+        "hi": "शीशे जैसी चिकनी सतह के लिए डबल-कोट पुट्टी।",
+        "mr": "आरशासारख्या गुळगुळीत पायासाठी दुहेरी पुट्टी."
+      },
+      "longDesc": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "features": [
+        {
+          "en": "Two-coat application",
+          "hi": "दो कोट",
+          "mr": "दोन कोटांचे काम"
+        },
+        {
+          "en": "Sanding & base priming",
+          "hi": "सैंडिंग व प्राइमर",
+          "mr": "घासणे व पायाचे प्रायमिंग"
+        },
+        {
+          "en": "Ready for any paint finish",
+          "hi": "किसी भी पेंट फ़िनिश के लिए तैयार",
+          "mr": "कोणत्याही रंगासाठी तयार"
+        }
+      ],
+      "icon": "icon-putty-blade",
+      "surface": [
+        "interior"
+      ],
+      "leadPartnerId": "p3",
+      "supportPartnerIds": [
+        "p1"
+      ],
+      "startingRatePerSqft": 0,
+      "applicableTiers": [
+        "distemper",
+        "premium-emulsion",
+        "luxury-royal"
+      ],
+      "typicalDuration": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "warranty": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "image": {
+        "src": "assets/images/services/putty.webp",
+        "alt": {
+          "en": "Smooth putty-finished wall",
+          "hi": "पुट्टी से चिकनी की गई दीवार",
+          "mr": "गुळगुळीत पुट्टी केलेली भिंत"
+        }
+      },
+      "order": 3
+    },
+    {
+      "id": "terrace-waterproofing",
+      "title": {
+        "en": "Terrace & Wall Waterproofing",
+        "hi": "टैरेस व दीवार वॉटरप्रूफिंग",
+        "mr": "टेरेस व भिंत वॉटरप्रूफिंग"
+      },
+      "shortDesc": {
+        "en": "Stop leakage and dampness for good.",
+        "hi": "गळती और सीलन से हमेशा के लिए छुटकारा।",
+        "mr": "गळती आणि ओलावा कायमचा थांबवा."
+      },
+      "longDesc": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "features": [
+        {
+          "en": "Moisture inspection",
+          "hi": "नमी की जाँच",
+          "mr": "ओलाव्याची तपासणी"
+        },
+        {
+          "en": "Membrane / chemical treatment",
+          "hi": "मेम्ब्रेन / केमिकल ट्रीटमेंट",
+          "mr": "मेम्ब्रेन / रासायनिक प्रक्रिया"
+        },
+        {
+          "en": "Warranty-backed work",
+          "hi": "वारंटी के साथ काम",
+          "mr": "वॉरंटी असलेले काम"
+        }
+      ],
+      "icon": "icon-shield-drop",
+      "surface": [
+        "terrace",
+        "exterior",
+        "interior"
+      ],
+      "leadPartnerId": "p2",
+      "supportPartnerIds": [
+        "p4"
+      ],
+      "startingRatePerSqft": 0,
+      "applicableTiers": [
+        "waterproofing"
+      ],
+      "typicalDuration": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "warranty": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "image": {
+        "src": "assets/images/services/waterproofing.webp",
+        "alt": {
+          "en": "Waterproof-coated terrace",
+          "hi": "वॉटरप्रूफ कोटिंग वाला टैरेस",
+          "mr": "वॉटरप्रूफ कोटिंग केलेले टेरेस"
+        }
+      },
+      "order": 4
+    },
+    {
+      "id": "crack-repair",
+      "title": {
+        "en": "Crack Repair",
+        "hi": "दरारों की मरम्मत",
+        "mr": "भेगा दुरुस्ती"
+      },
+      "shortDesc": {
+        "en": "Seal cracks before they become leaks.",
+        "hi": "दरारें लीकेज बनने से पहले भरें।",
+        "mr": "भेगांची गळती होण्याआधीच त्या बंद करा."
+      },
+      "longDesc": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "features": [
+        {
+          "en": "Crack widening & filling",
+          "hi": "दरार खोलकर भराई",
+          "mr": "भेग रुंद करून भरणे"
+        },
+        {
+          "en": "Elastomeric sealants",
+          "hi": "लचीले सीलेंट",
+          "mr": "इलास्टोमेरिक सीलंट"
+        },
+        {
+          "en": "Seamless blending with paint",
+          "hi": "पेंट के साथ बेदाग़ मिलान",
+          "mr": "रंगाशी एकसंध मिसळणे"
+        }
+      ],
+      "icon": "icon-crack",
+      "surface": [
+        "interior",
+        "exterior",
+        "terrace"
+      ],
+      "leadPartnerId": "p2",
+      "supportPartnerIds": [
+        "p3"
+      ],
+      "startingRatePerSqft": 0,
+      "applicableTiers": [
+        "waterproofing",
+        "premium-emulsion"
+      ],
+      "typicalDuration": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "warranty": {
+        "en": "TBD",
+        "hi": "TBD"
+      },
+      "image": {
+        "src": "assets/images/services/crack.webp",
+        "alt": {
+          "en": "Repaired wall crack",
+          "hi": "मरम्मत की गई दीवार की दरार",
+          "mr": "दुरुस्त केलेली भिंतीची भेग"
+        }
+      },
+      "order": 5
+    }
+  ]
+}

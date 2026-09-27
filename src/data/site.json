@@ -1,0 +1,97 @@
+{
+  "version": "1.1.0",
+  "updated": "2026-09-24",
+  "_note": "payments are a PLACEHOLDER; location is the town only (Shegaon, Dist. Buldhana) - add the full shop address / map pin before launch.",
+  "business": {
+    "name": {
+      "en": "Vishal Painting & Waterproofing",
+      "hi": "विशाल पेंटिंग व वॉटरप्रूफिंग",
+      "mr": "विशाल पेंटिंग व वॉटरप्रूफिंग"
+    }
+  },
+  "contact": {
+    "phone": "+919011608592",
+    "whatsapp": "919011608592",
+    "display": "+91 90116 08592"
+  },
+  "payments": {
+    "methods": [
+      {
+        "id": "upi",
+        "icon": "rupee",
+        "label": {
+          "en": "UPI",
+          "hi": "UPI",
+          "mr": "UPI"
+        },
+        "note": {
+          "en": "GPay, PhonePe, Paytm or any UPI app",
+          "hi": "GPay, PhonePe, Paytm या कोई भी UPI ऐप",
+          "mr": "GPay, PhonePe, Paytm किंवा कोणतेही UPI ॲप"
+        }
+      },
+      {
+        "id": "bank",
+        "icon": "bank",
+        "label": {
+          "en": "Bank transfer",
+          "hi": "बैंक ट्रांसफ़र",
+          "mr": "बँक ट्रान्सफर"
+        },
+        "note": {
+          "en": "NEFT, IMPS or RTGS",
+          "hi": "NEFT, IMPS या RTGS",
+          "mr": "NEFT, IMPS किंवा RTGS"
+        }
+      },
+      {
+        "id": "cash",
+        "icon": "cash",
+        "label": {
+          "en": "Cash",
+          "hi": "नकद",
+          "mr": "रोख"
+        },
+        "note": {
+          "en": "Pay in person and ask for a receipt",
+          "hi": "सामने भुगतान करें और रसीद माँगें",
+          "mr": "प्रत्यक्ष पैसे द्या आणि पावती मागा"
+        }
+      },
+      {
+        "id": "cheque",
+        "icon": "cheque",
+        "label": {
+          "en": "Cheque",
+          "hi": "चेक",
+          "mr": "चेक"
+        },
+        "note": {
+          "en": "Accepted for larger projects",
+          "hi": "बड़े प्रोजेक्ट के लिए मान्य",
+          "mr": "मोठ्या कामांसाठी स्वीकारला जातो"
+        }
+      }
+    ],
+    "note": {
+      "en": "The payment schedule is agreed in your written quote after the free site inspection.",
+      "hi": "भुगतान का शेड्यूल मुफ़्त साइट निरीक्षण के बाद लिखित कोटेशन में तय होता है।",
+      "mr": "पेमेंटचे वेळापत्रक मोफत साइट पाहणीनंतर लेखी कोटेशनमध्ये ठरवले जाते."
+    },
+    "dummy": true
+  },
+  "location": {
+    "city": {
+      "en": "Shegaon",
+      "hi": "शेगांव",
+      "mr": "शेगाव"
+    },
+    "region": {
+      "en": "Buldhana, Maharashtra",
+      "hi": "बुलढाणा, महाराष्ट्र",
+      "mr": "बुलढाणा, महाराष्ट्र"
+    },
+    "mapQuery": "Shegaon, Buldhana, Maharashtra, India",
+    "dummy": true
+  }
+}

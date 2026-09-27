@@ -1,0 +1,215 @@
+{
+  "version": "1.1.0",
+  "updated": "2026-09-24",
+  "_note": "DUMMY DATA. Every name, phone number, stat, credential and review below is a placeholder. Replace before launch. Phone numbers are fake but well-formed: wa.me links built from them WILL open real WhatsApp chats with whoever owns the number. `*text*` inside method titles renders as <em>.",
+  "items": [
+    {
+      "id": "p1",
+      "slug": "rajesh-kadam",
+      "name": { "en": "Rajesh Kadam", "hi": "राजेश कदम" },
+      "isLead": true,
+      "roleTitle": { "en": "Lead Artisan & Luxury Color Specialist", "hi": "मुख्य कारीगर व लक्ज़री कलर विशेषज्ञ" },
+      "eyebrow": { "en": "Luxury colour & finishing", "hi": "लक्ज़री कलर व फ़िनिशिंग" },
+      "domain": "luxury-color",
+      "bio": {
+        "en": "Leads every project from the first consultation to the final coat. Luxury emulsions, plastic paints and precision colour matching — interior finishes that look as good in ten years as on day one.",
+        "hi": "हर प्रोजेक्ट को पहली सलाह से आख़िरी कोट तक संभालते हैं। लक्ज़री इमल्शन, प्लास्टिक पेंट और सटीक कलर मैचिंग — ऐसी इंटीरियर फ़िनिश जो सालों तक नई जैसी दिखे।"
+      },
+      "yearsExperience": 12,
+      "stats": [
+        { "value": "12", "label": { "en": "Years experience", "hi": "साल का अनुभव" } },
+        { "value": "340", "label": { "en": "Homes painted", "hi": "घर पेंट किए" } },
+        { "value": "6.5L", "label": { "en": "Sq.ft finished", "hi": "वर्ग फ़ुट फ़िनिश" } },
+        { "value": "4.9", "label": { "en": "Client rating ★", "hi": "ग्राहक रेटिंग ★" } }
+      ],
+      "method": {
+        "title": { "en": "The *flawless-finish* method", "hi": "*बेदाग़-फ़िनिश* की विधि" },
+        "subtitle": { "en": "Four stages. No shortcuts.", "hi": "चार चरण। कोई शॉर्टकट नहीं।" },
+        "steps": [
+          { "title": { "en": "Colour consultation", "hi": "कलर सलाह" }, "desc": { "en": "Shade matching under your home's own light.", "hi": "आपके घर की रोशनी में शेड का मिलान।" } },
+          { "title": { "en": "Prep & primer", "hi": "तैयारी व प्राइमर" }, "desc": { "en": "Clean, sand and prime for an even base.", "hi": "सफ़ाई, घिसाई और एकसार प्राइमर।" } },
+          { "title": { "en": "Two-coat finish", "hi": "दो कोट फ़िनिश" }, "desc": { "en": "Roller-applied coats with proper drying gaps.", "hi": "रोलर से दो कोट, सही सुखाने के अंतर के साथ।" } },
+          { "title": { "en": "Touch-up & handover", "hi": "टच-अप व हैंडओवर" }, "desc": { "en": "Edge check, clean-up and a walkthrough.", "hi": "किनारों की जाँच, सफ़ाई और वॉकथ्रू।" } }
+        ]
+      },
+      "credentials": [
+        { "name": { "en": "Colour-matching workshop", "hi": "कलर-मैचिंग वर्कशॉप" }, "year": "2018" },
+        { "name": { "en": "Premium emulsion application course", "hi": "प्रीमियम इमल्शन एप्लिकेशन कोर्स" }, "year": "2020" },
+        { "name": { "en": "Specialises in luxury interiors", "hi": "लक्ज़री इंटीरियर में विशेषज्ञ" }, "year": "—" }
+      ],
+      "expertiseTags": [
+        { "en": "Luxury emulsion", "hi": "लक्ज़री इमल्शन" },
+        { "en": "Colour matching", "hi": "कलर मैचिंग" },
+        { "en": "Texture finishes", "hi": "टेक्सचर फ़िनिश" },
+        { "en": "Accent walls", "hi": "एक्सेंट वॉल" }
+      ],
+      "primaryServices": ["interior-painting"],
+      "beforeAfterId": "ba-001",
+      "contact": { "whatsapp": "919000000001", "phone": "+919000000001", "display": "+91 90000 00001", "dummy": true },
+      "visual": {
+        "icon": "roller",
+        "monogram": "RK",
+        "coverImage": "assets/images/partners/p1-cover.svg",
+        "coverAlt": { "en": "Illustration of a paint roller on a warm wall", "hi": "गर्म रंग की दीवार पर पेंट रोलर का चित्र" }
+      },
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": "p2",
+      "slug": "sanjay-pawar",
+      "name": { "en": "Sanjay Pawar", "hi": "संजय पवार" },
+      "isLead": false,
+      "roleTitle": { "en": "Waterproofing & Structural Surface Specialist", "hi": "वॉटरप्रूफिंग व स्ट्रक्चरल सरफ़ेस विशेषज्ञ" },
+      "eyebrow": { "en": "Waterproofing & repair", "hi": "वॉटरप्रूफिंग व मरम्मत" },
+      "domain": "waterproofing",
+      "bio": {
+        "en": "Stops leaks at the source — terrace membranes, exterior water repellents, damp-wall treatment and structural crack repair that keep your home dry through every monsoon.",
+        "hi": "गळती को जड़ से रोकते हैं — टैरेस मेम्ब्रेन, बाहरी वॉटर रिपेलेंट, सीलन वाली दीवार का ट्रीटमेंट और दरारों की मरम्मत, ताकि हर मॉनसून में घर सूखा रहे।"
+      },
+      "yearsExperience": 9,
+      "stats": [
+        { "value": "9", "label": { "en": "Years experience", "hi": "साल का अनुभव" } },
+        { "value": "210", "label": { "en": "Terraces sealed", "hi": "टैरेस सील किए" } },
+        { "value": "4.2L", "label": { "en": "Sq.ft waterproofed", "hi": "वर्ग फ़ुट वॉटरप्रूफ" } },
+        { "value": "4.8", "label": { "en": "Client rating ★", "hi": "ग्राहक रेटिंग ★" } }
+      ],
+      "method": {
+        "title": { "en": "The *leak-proof* method", "hi": "*लीक-प्रूफ* विधि" },
+        "subtitle": { "en": "Four stages. Tested before we leave.", "hi": "चार चरण। जाने से पहले टेस्ट।" },
+        "steps": [
+          { "title": { "en": "Inspect & moisture check", "hi": "जाँच व नमी टेस्ट" }, "desc": { "en": "Trace the source of every leak and damp patch.", "hi": "हर लीकेज और सीलन का स्रोत ढूँढना।" } },
+          { "title": { "en": "Crack & joint sealing", "hi": "दरार व जोड़ की सीलिंग" }, "desc": { "en": "Open, clean and fill cracks and pipe joints.", "hi": "दरारें और पाइप जोड़ खोलकर साफ़ करना और भरना।" } },
+          { "title": { "en": "Membrane coating", "hi": "मेम्ब्रेन कोटिंग" }, "desc": { "en": "Multi-layer coat with mesh at weak points.", "hi": "कमज़ोर जगहों पर जाली के साथ बहु-परत कोट।" } },
+          { "title": { "en": "Cure & water test", "hi": "क्योरिंग व वॉटर टेस्ट" }, "desc": { "en": "Ponding test to prove it holds before handover.", "hi": "हैंडओवर से पहले पानी भरकर जाँच।" } }
+        ]
+      },
+      "credentials": [
+        { "name": { "en": "Waterproofing systems training", "hi": "वॉटरप्रूफिंग सिस्टम ट्रेनिंग" }, "year": "2019" },
+        { "name": { "en": "Structural crack repair workshop", "hi": "स्ट्रक्चरल क्रैक रिपेयर वर्कशॉप" }, "year": "2021" },
+        { "name": { "en": "Specialises in terraces & damp walls", "hi": "टैरेस व सीलन वाली दीवारों में विशेषज्ञ" }, "year": "—" }
+      ],
+      "expertiseTags": [
+        { "en": "Terrace waterproofing", "hi": "टैरेस वॉटरप्रूफिंग" },
+        { "en": "Crack repair", "hi": "क्रैक रिपेयर" },
+        { "en": "Damp-wall treatment", "hi": "सीलन ट्रीटमेंट" },
+        { "en": "Water-repellent coat", "hi": "वॉटर-रिपेलेंट कोट" }
+      ],
+      "primaryServices": ["terrace-waterproofing", "crack-repair"],
+      "beforeAfterId": "ba-002",
+      "contact": { "whatsapp": "919000000002", "phone": "+919000000002", "display": "+91 90000 00002", "dummy": true },
+      "visual": {
+        "icon": "shield-drop",
+        "monogram": "SP",
+        "coverImage": "assets/images/partners/p2-cover.svg",
+        "coverAlt": { "en": "Illustration of a shield with a water drop", "hi": "पानी की बूँद वाली ढाल का चित्र" }
+      },
+      "order": 2,
+      "active": true
+    },
+    {
+      "id": "p3",
+      "slug": "amit-shinde",
+      "name": { "en": "Amit Shinde", "hi": "अमित शिंदे" },
+      "isLead": false,
+      "roleTitle": { "en": "Interior Wall Putty & Leveling Master", "hi": "इंटीरियर वॉल पुट्टी व लेवलिंग मास्टर" },
+      "eyebrow": { "en": "Surface preparation", "hi": "सरफ़ेस तैयारी" },
+      "domain": "putty-leveling",
+      "bio": {
+        "en": "The foundation of every great finish. Double-coat putty, mirror-smooth leveling and proper base priming — so paint goes on evenly and lasts longer.",
+        "hi": "हर बेहतरीन फ़िनिश की नींव। डबल-कोट पुट्टी, शीशे जैसी चिकनी लेवलिंग और सही प्राइमिंग — ताकि पेंट एकसार लगे और ज़्यादा टिके।"
+      },
+      "yearsExperience": 11,
+      "stats": [
+        { "value": "11", "label": { "en": "Years experience", "hi": "साल का अनुभव" } },
+        { "value": "420", "label": { "en": "Rooms levelled", "hi": "कमरे लेवल किए" } },
+        { "value": "5.1L", "label": { "en": "Sq.ft puttied", "hi": "वर्ग फ़ुट पुट्टी" } },
+        { "value": "4.9", "label": { "en": "Client rating ★", "hi": "ग्राहक रेटिंग ★" } }
+      ],
+      "method": {
+        "title": { "en": "The *mirror-smooth* method", "hi": "*शीशे-जैसी-चिकनी* विधि" },
+        "subtitle": { "en": "Four stages. No shortcuts.", "hi": "चार चरण। कोई शॉर्टकट नहीं।" },
+        "steps": [
+          { "title": { "en": "Scrape & repair", "hi": "खुरचना व मरम्मत" }, "desc": { "en": "Remove loose paint, fill holes and cracks.", "hi": "ढीला पेंट हटाना, छेद और दरारें भरना।" } },
+          { "title": { "en": "Putty coat one", "hi": "पुट्टी का पहला कोट" }, "desc": { "en": "Even first layer with a wide blade.", "hi": "चौड़े ब्लेड से एकसार पहली परत।" } },
+          { "title": { "en": "Putty coat two", "hi": "पुट्टी का दूसरा कोट" }, "desc": { "en": "Cross-direction coat for a level plane.", "hi": "उल्टी दिशा में कोट, समतल सतह के लिए।" } },
+          { "title": { "en": "Sand & prime", "hi": "घिसाई व प्राइमर" }, "desc": { "en": "Fine sanding, dust-off, base primer.", "hi": "बारीक घिसाई, धूल साफ़, बेस प्राइमर।" } }
+        ]
+      },
+      "credentials": [
+        { "name": { "en": "Putty application training", "hi": "पुट्टी एप्लिकेशन ट्रेनिंग" }, "year": "2017" },
+        { "name": { "en": "Surface preparation workshop", "hi": "सरफ़ेस प्रिपरेशन वर्कशॉप" }, "year": "2020" },
+        { "name": { "en": "Specialises in new-construction walls", "hi": "नई बिल्डिंग की दीवारों में विशेषज्ञ" }, "year": "—" }
+      ],
+      "expertiseTags": [
+        { "en": "Double-coat putty", "hi": "डबल-कोट पुट्टी" },
+        { "en": "POP punning", "hi": "पीओपी पनिंग" },
+        { "en": "Base priming", "hi": "बेस प्राइमिंग" },
+        { "en": "Ceiling leveling", "hi": "सीलिंग लेवलिंग" }
+      ],
+      "primaryServices": ["wall-putty"],
+      "beforeAfterId": "ba-003",
+      "contact": { "whatsapp": "919000000003", "phone": "+919000000003", "display": "+91 90000 00003", "dummy": true },
+      "visual": {
+        "icon": "putty-blade",
+        "monogram": "AS",
+        "coverImage": "assets/images/partners/p3-cover.svg",
+        "coverAlt": { "en": "Illustration of a putty blade on a smooth wall", "hi": "चिकनी दीवार पर पुट्टी ब्लेड का चित्र" }
+      },
+      "order": 3,
+      "active": true
+    },
+    {
+      "id": "p4",
+      "slug": "nitin-jadhav",
+      "name": { "en": "Nitin Jadhav", "hi": "नितीन जाधव" },
+      "isLead": false,
+      "roleTitle": { "en": "Exterior Facade & Scaffolding Execution Lead", "hi": "एक्सटीरियर फ़साड व स्कैफ़ोल्डिंग एक्ज़िक्यूशन लीड" },
+      "eyebrow": { "en": "Exterior & facade", "hi": "एक्सटीरियर व फ़साड" },
+      "domain": "exterior-facade",
+      "bio": {
+        "en": "From row houses to high-rises — safe scaffolding and weather-proof protective coats for large residential and commercial projects.",
+        "hi": "रो हाउस से लेकर ऊँची इमारतों तक — सुरक्षित स्कैफ़ोल्डिंग और मौसम-रोधी प्रोटेक्टिव कोट के साथ बड़े रिहायशी व कमर्शियल प्रोजेक्ट।"
+      },
+      "yearsExperience": 14,
+      "stats": [
+        { "value": "14", "label": { "en": "Years experience", "hi": "साल का अनुभव" } },
+        { "value": "65", "label": { "en": "Facades completed", "hi": "फ़साड पूरे किए" } },
+        { "value": "9.8L", "label": { "en": "Sq.ft coated", "hi": "वर्ग फ़ुट कोटिंग" } },
+        { "value": "4.8", "label": { "en": "Client rating ★", "hi": "ग्राहक रेटिंग ★" } }
+      ],
+      "method": {
+        "title": { "en": "The *weather-ready* method", "hi": "*मौसम-रोधी* विधि" },
+        "subtitle": { "en": "Four stages. Safety first.", "hi": "चार चरण। सुरक्षा पहले।" },
+        "steps": [
+          { "title": { "en": "Scaffold & safety setup", "hi": "स्कैफ़ोल्डिंग व सुरक्षा" }, "desc": { "en": "Certified-standard scaffolding, nets and harnesses.", "hi": "मानक स्कैफ़ोल्डिंग, जाली और सेफ़्टी हार्नेस।" } },
+          { "title": { "en": "Wash & repair", "hi": "धुलाई व मरम्मत" }, "desc": { "en": "Pressure-wash, remove algae, patch the plaster.", "hi": "प्रेशर वॉश, काई हटाना, प्लास्टर की मरम्मत।" } },
+          { "title": { "en": "Protective primer", "hi": "प्रोटेक्टिव प्राइमर" }, "desc": { "en": "Alkali-resistant primer for a durable bond.", "hi": "टिकाऊ पकड़ के लिए एल्कली-रेज़िस्टेंट प्राइमर।" } },
+          { "title": { "en": "Weather-proof topcoat", "hi": "वेदर-प्रूफ टॉपकोट" }, "desc": { "en": "Two coats of exterior emulsion, UV and rain rated.", "hi": "एक्सटीरियर इमल्शन के दो कोट, धूप-बारिश रोधी।" } }
+        ]
+      },
+      "credentials": [
+        { "name": { "en": "Working-at-height safety training", "hi": "ऊँचाई पर काम की सुरक्षा ट्रेनिंग" }, "year": "2016" },
+        { "name": { "en": "Exterior coating systems course", "hi": "एक्सटीरियर कोटिंग सिस्टम कोर्स" }, "year": "2019" },
+        { "name": { "en": "Specialises in high-rise & large facades", "hi": "हाई-राइज़ व बड़े फ़साड में विशेषज्ञ" }, "year": "—" }
+      ],
+      "expertiseTags": [
+        { "en": "Exterior emulsion", "hi": "एक्सटीरियर इमल्शन" },
+        { "en": "Scaffolding", "hi": "स्कैफ़ोल्डिंग" },
+        { "en": "Facade repair", "hi": "फ़साड मरम्मत" },
+        { "en": "Society projects", "hi": "सोसायटी प्रोजेक्ट" }
+      ],
+      "primaryServices": ["exterior-painting"],
+      "beforeAfterId": "ba-004",
+      "contact": { "whatsapp": "919000000004", "phone": "+919000000004", "display": "+91 90000 00004", "dummy": true },
+      "visual": {
+        "icon": "building",
+        "monogram": "NJ",
+        "coverImage": "assets/images/partners/p4-cover.svg",
+        "coverAlt": { "en": "Illustration of a building facade with scaffolding", "hi": "स्कैफ़ोल्डिंग वाली इमारत का चित्र" }
+      },
+      "order": 4,
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+
+/* Devanagari stacks taller than Latin: give Hindi/Marathi headings and body room. */
+:lang(hi) h1, :lang(mr) h1 { line-height: 1.35; letter-spacing: 0; }
+:lang(hi) h2, :lang(hi) h3, :lang(mr) h2, :lang(mr) h3 { line-height: 1.4; }
+:lang(hi) body, :lang(mr) body, :lang(hi) p, :lang(mr) p { line-height: 1.7; }

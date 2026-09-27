@@ -1,0 +1,129 @@
+/* Website-wide reviews: one sideways-scrolling row (reviews-carousel.js). */
+.rv {
+  --rv-gap: var(--space-3);
+  --rv-per: 1.15; /* cards visible at once; the fraction on phones hints there's more to swipe */
+}
+
+@media (min-width: 768px) {
+  .rv { --rv-per: 3; }
+}
+
+@media (min-width: 1100px) {
+  .rv { --rv-per: 4; }
+}
+
+.reviews-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.reviews-summary__score {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.reviews-summary__stars {
+  color: var(--c-star);
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+}
+
+.reviews-summary__count {
+  color: var(--c-text-secondary);
+  font-size: 0.9rem;
+}
+
+.rv-track {
+  display: flex;
+  gap: var(--rv-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: var(--space-1);
+}
+
+.rv-track::-webkit-scrollbar { display: none; }
+
+.rv-track:focus-visible {
+  outline: 3px solid var(--c-brand);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+.rv-track > .review-card {
+  flex: 0 0 calc((100% - (var(--rv-per) - 1) * var(--rv-gap)) / var(--rv-per));
+  scroll-snap-align: start;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border: 1px solid var(--c-border);
+  background: var(--c-bg-raised);
+}
+
+.review-card .review-stars {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.review-card .review-quote {
+  flex: 1;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.verified--sample { color: var(--c-text-secondary); }
+
+.review-original,
+.review-partner {
+  font-size: 0.75rem;
+  color: var(--c-text-muted);
+}
+
+/* Prev / next / pause */
+.rv-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.rv-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-full);
+  background: var(--c-bg-raised);
+  color: var(--c-text-primary);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.rv-nav:hover { border-color: var(--c-text-primary); }
+
+.rv-nav:focus-visible {
+  outline: 3px solid var(--c-brand);
+  outline-offset: 2px;
+}
+
+.rv-nav .icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv-track { scroll-behavior: auto; }
+}

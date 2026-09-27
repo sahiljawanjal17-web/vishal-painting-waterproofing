@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-09-24",
+  "_note": "SAMPLE REVIEWS ONLY. Every entry is invented placeholder text (isSample: true, verified: false). Replace with real customer reviews before launch; the QA checklist blocks launch while any SAMPLE_ id remains.",
+  "items": [
+    {
+      "id": "SAMPLE_1", "reviewerName": "Sample Reviewer", "locality": "Shegaon", "rating": 5,
+      "text": { "original": "en", "en": "The shade matched exactly what we picked and the finish is spotless. Finished a day early.", "hi": "शेड बिल्कुल वैसा ही आया जो हमने चुना था और फ़िनिश बेदाग़ है। काम एक दिन पहले पूरा हो गया।" },
+      "serviceIds": ["interior-painting"], "partnerId": "p1", "propertyType": "3bhk", "verified": false, "date": "2026-08-14", "isSample": true
+    },
+    {
+      "id": "SAMPLE_2", "reviewerName": "Sample Reviewer", "locality": "Khamgaon", "rating": 5,
+      "text": { "original": "en", "en": "Very tidy team. Furniture was covered and the flat was clean at handover.", "hi": "बहुत साफ़-सुथरा काम। फ़र्नीचर ढका हुआ था और हैंडओवर पर फ़्लैट साफ़ मिला।" },
+      "serviceIds": ["interior-painting"], "partnerId": "p1", "propertyType": "2bhk", "verified": false, "date": "2026-07-02", "isSample": true
+    },
+    {
+      "id": "SAMPLE_3", "reviewerName": "Sample Reviewer", "locality": "Nandura", "rating": 4,
+      "text": { "original": "en", "en": "Great finish on the accent wall. Took a little longer than quoted, but worth the wait.", "hi": "एक्सेंट वॉल पर शानदार फ़िनिश। बताए गए समय से थोड़ा ज़्यादा लगा, पर इंतज़ार सार्थक रहा।" },
+      "serviceIds": ["interior-painting"], "partnerId": "p1", "propertyType": "3bhk", "verified": false, "date": "2026-05-21", "isSample": true
+    },
+    {
+      "id": "SAMPLE_4", "reviewerName": "Sample Reviewer", "locality": "Malkapur", "rating": 5,
+      "text": { "original": "en", "en": "Survived a full monsoon without a single drop inside. Very neat work.", "hi": "पूरे मॉनसून में अंदर एक बूँद नहीं आई। बहुत साफ़ काम।" },
+      "serviceIds": ["terrace-waterproofing"], "partnerId": "p2", "propertyType": "row-house", "verified": false, "date": "2026-08-30", "isSample": true
+    },
+    {
+      "id": "SAMPLE_5", "reviewerName": "Sample Reviewer", "locality": "Jalgaon Jamod", "rating": 5,
+      "text": { "original": "en", "en": "They did a water-ponding test before handover and showed us it held. That gave us confidence.", "hi": "हैंडओवर से पहले उन्होंने पानी भरकर टेस्ट किया और दिखाया कि कुछ नहीं रिसता। इससे भरोसा बढ़ा।" },
+      "serviceIds": ["terrace-waterproofing"], "partnerId": "p2", "propertyType": "row-house", "verified": false, "date": "2026-06-18", "isSample": true
+    },
+    {
+      "id": "SAMPLE_6", "reviewerName": "Sample Reviewer", "locality": "Buldhana", "rating": 4,
+      "text": { "original": "en", "en": "Old damp patches on the bedroom wall are gone. Explained every step clearly.", "hi": "बेडरूम की दीवार पर पुराने सीलन के धब्बे ख़त्म हो गए। हर स्टेप साफ़ समझाया।" },
+      "serviceIds": ["crack-repair"], "partnerId": "p2", "propertyType": "2bhk", "verified": false, "date": "2026-04-09", "isSample": true
+    },
+    {
+      "id": "SAMPLE_7", "reviewerName": "Sample Reviewer", "locality": "Shegaon", "rating": 5,
+      "text": { "original": "en", "en": "Walls came out so smooth that the painters had nothing to fix.", "hi": "दीवारें इतनी चिकनी निकलीं कि पेंटर को कुछ ठीक नहीं करना पड़ा।" },
+      "serviceIds": ["wall-putty"], "partnerId": "p3", "propertyType": "3bhk", "verified": false, "date": "2026-08-05", "isSample": true
+    },
+    {
+      "id": "SAMPLE_8", "reviewerName": "Sample Reviewer", "locality": "Khamgaon", "rating": 5,
+      "text": { "original": "en", "en": "Double-coat putty and proper sanding. You can feel the difference with your hand.", "hi": "डबल-कोट पुट्टी और सही घिसाई। हाथ फेरकर फ़र्क़ महसूस होता है।" },
+      "serviceIds": ["wall-putty"], "partnerId": "p3", "propertyType": "2bhk", "verified": false, "date": "2026-06-27", "isSample": true
+    },
+    {
+      "id": "SAMPLE_9", "reviewerName": "Sample Reviewer", "locality": "Mehkar", "rating": 4,
+      "text": { "original": "en", "en": "Dust was managed well for a full 3BHK job. Clean and on schedule.", "hi": "पूरे 3BHK के काम में धूल अच्छे से संभाली। साफ़ और समय पर।" },
+      "serviceIds": ["wall-putty"], "partnerId": "p3", "propertyType": "3bhk", "verified": false, "date": "2026-03-15", "isSample": true
+    },
+    {
+      "id": "SAMPLE_10", "reviewerName": "Sample Reviewer", "locality": "Chikhli", "rating": 5,
+      "text": { "original": "en", "en": "Whole building done on schedule and the finish has held through the rains.", "hi": "पूरी बिल्डिंग समय पर हुई और बारिश के बाद भी फ़िनिश जस की तस है।" },
+      "serviceIds": ["exterior-painting"], "partnerId": "p4", "propertyType": "commercial", "verified": false, "date": "2026-09-01", "isSample": true
+    },
+    {
+      "id": "SAMPLE_11", "reviewerName": "Sample Reviewer", "locality": "Shegaon", "rating": 4,
+      "text": { "original": "en", "en": "Scaffolding was safe and neat, and the society committee had no complaints.", "hi": "स्कैफ़ोल्डिंग सुरक्षित और व्यवस्थित थी, सोसायटी कमेटी को कोई शिकायत नहीं रही।" },
+      "serviceIds": ["exterior-painting"], "partnerId": "p4", "propertyType": "commercial", "verified": false, "date": "2026-07-19", "isSample": true
+    },
+    {
+      "id": "SAMPLE_12", "reviewerName": "Sample Reviewer", "locality": "Nandura", "rating": 5,
+      "text": { "original": "en", "en": "Algae and old paint were properly removed before the primer went on. It looks new.", "hi": "प्राइमर से पहले काई और पुराना पेंट ठीक से हटाया गया। बिल्कुल नया लगता है।" },
+      "serviceIds": ["exterior-painting"], "partnerId": "p4", "propertyType": "row-house", "verified": false, "date": "2026-05-08", "isSample": true
+    }
+  ]
+}

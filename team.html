@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Painting - Specialist</title>
+  
+  <!-- CSS Imports (Manifest) -->
+  <meta name="theme-color" content="#f5f1ea">
+  <link rel="stylesheet" href="src/css/main.css">
+  
+  <meta name="description" content="Meet the specialized partners at Vishal Painting & Waterproofing.">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <strong>VISHAL</strong> · <span data-label="brandTail">Painting & Waterproofing</span>
+      </div>
+      <div class="header-actions">
+        <a href="index.html#team" class="back-link" data-label="allSpecialists">← All Specialists</a>
+        <div class="lang-toggle-group" role="group" data-label="langGroup" data-label-attr="aria-label" aria-label="Language">
+          <button class="lang-btn active" aria-pressed="true" data-lang="en" lang="en">EN</button>
+          <button class="lang-btn" aria-pressed="false" data-lang="hi" lang="hi">हिं</button>
+          <button class="lang-btn" aria-pressed="false" data-lang="mr" lang="mr">मरा</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Back to the team list (always visible at the top of a profile) -->
+    <div class="container profile-topbar">
+      <a class="btn btn-outline btn-sm profile-back" href="index.html#team" data-label="allSpecialists">← All Specialists</a>
+    </div>
+
+    <!-- One specialist's profile, rendered by initPartnerProfile from the #pN hash -->
+    <div id="profiles"></div>
+
+    <!-- Bottom CTA: follows the selected partner (see contact-dock.js) -->
+    <section class="bottom-cta">
+      <div class="container">
+        <h2><span data-label="bottomCtaPre">Great results start with a</span> <em data-label="bottomCtaEm">free inspection.</em></h2>
+        <a class="btn btn-whatsapp" data-follow-wa target="_blank" rel="noopener" data-label="waNow">WhatsApp Now →</a>
+        <p><a class="profile-back-link" href="index.html#team" data-label="allSpecialists">← All Specialists</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick contact: Call + WhatsApp, retargets to the profile in view -->
+  <aside id="contact-dock" aria-label="Quick contact"></aside>
+
+  <!-- store/event-bus are classic scripts exposing window.store / window.ebus; they must run before the module -->
+  <script src="src/js/core/store.js"></script>
+  <script src="src/js/core/event-bus.js"></script>
+  <script type="module" src="src/js/team-page.js"></script>
+</body>
+</html>
+

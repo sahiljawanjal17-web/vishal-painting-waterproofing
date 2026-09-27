@@ -1,0 +1,75 @@
+/* Phone menu: a panel sliding in from the right over a dim backdrop. Closed = off-canvas, invisible
+   and `inert` (set in HTML, toggled by nav-drawer.js) so keyboard and screen readers skip it. */
+.nav-toggle { display: none; }
+
+@media (max-width: 767px) {
+  .nav-toggle { display: grid; }
+}
+
+.nav-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s;
+}
+
+.nav-drawer.is-open { visibility: visible; transition-delay: 0s; }
+
+.nav-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(39, 48, 58, 0.45);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-drawer.is-open .nav-drawer__backdrop { opacity: 1; }
+
+.nav-drawer__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(320px, 86vw);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4) calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+  background: var(--c-bg-page);
+  border-left: 1px solid var(--c-border);
+  box-shadow: -12px 0 40px rgba(39, 48, 58, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+  overflow-y: auto;
+}
+
+.nav-drawer.is-open .nav-drawer__panel { transform: none; }
+
+.nav-drawer__close { align-self: flex-end; }
+
+.nav-drawer__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+
+.nav-drawer__list a {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 var(--space-2);
+  border-bottom: 1px solid var(--c-border-light);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--c-text-primary);
+}
+
+.nav-drawer__list a:hover { color: var(--c-accent); }
+.nav-drawer__list a:focus-visible { outline: 3px solid var(--c-accent); outline-offset: -3px; }
+.nav-drawer__cta { min-height: 52px; margin-top: auto; }
+
+@media (min-width: 768px) {
+  .nav-drawer { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-drawer, .nav-drawer__backdrop, .nav-drawer__panel { transition: none; }
+}

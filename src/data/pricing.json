@@ -1,0 +1,248 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-09-24",
+  "_note": "PLACEHOLDER RATES (INR per sq.ft, labour + material). Must be confirmed by Vishal before launch.",
+  "currency": "INR",
+  "minimumJobCharge": 5000,
+  "surfaceMultipliers": {
+    "interior": 1,
+    "exterior": 1.2,
+    "terrace": 1
+  },
+  "tiers": [
+    {
+      "id": "distemper",
+      "label": {
+        "en": "Distemper",
+        "hi": "डिस्टेंपर",
+        "mr": "डिस्टेंपर"
+      },
+      "description": {
+        "en": "Budget-friendly, matte finish",
+        "hi": "किफ़ायती, मैट फ़िनिश",
+        "mr": "बजेटमध्ये बसणारे, मॅट फिनिश"
+      },
+      "surfaces": [
+        "interior"
+      ],
+      "ratePerSqft": {
+        "min": 8,
+        "max": 12
+      },
+      "includes": [
+        {
+          "en": "1 coat primer + 2 coats",
+          "hi": "1 कोट प्राइमर + 2 कोट",
+          "mr": "1 कोट प्रायमर + 2 कोट"
+        }
+      ]
+    },
+    {
+      "id": "premium-emulsion",
+      "label": {
+        "en": "Premium Emulsion",
+        "hi": "प्रीमियम इमल्शन",
+        "mr": "प्रीमियम इमल्शन"
+      },
+      "description": {
+        "en": "Washable, smooth sheen",
+        "hi": "धुलने योग्य, हल्की चमक",
+        "mr": "धुता येणारे, हलकी चमक"
+      },
+      "surfaces": [
+        "interior",
+        "exterior"
+      ],
+      "ratePerSqft": {
+        "min": 16,
+        "max": 22
+      },
+      "includes": [
+        {
+          "en": "Primer + 2 coats premium emulsion",
+          "hi": "प्राइमर + 2 कोट प्रीमियम इमल्शन",
+          "mr": "प्रायमर + 2 कोट प्रीमियम इमल्शन"
+        }
+      ]
+    },
+    {
+      "id": "luxury-royal",
+      "label": {
+        "en": "Luxury Royal",
+        "hi": "लक्ज़री रॉयल",
+        "mr": "लक्झरी रॉयल"
+      },
+      "description": {
+        "en": "Rich luxury finish, stain resistant",
+        "hi": "रिच लक्ज़री फ़िनिश, दाग़-रोधी",
+        "mr": "श्रीमंत लक्झरी फिनिश, डागरोधक"
+      },
+      "surfaces": [
+        "interior",
+        "exterior"
+      ],
+      "ratePerSqft": {
+        "min": 24,
+        "max": 34
+      },
+      "includes": [
+        {
+          "en": "Premium primer + 2 coats luxury paint",
+          "hi": "प्रीमियम प्राइमर + 2 कोट लक्ज़री पेंट",
+          "mr": "प्रीमियम प्रायमर + 2 कोट लक्झरी रंग"
+        }
+      ]
+    },
+    {
+      "id": "waterproofing",
+      "label": {
+        "en": "Waterproofing",
+        "hi": "वॉटरप्रूफिंग",
+        "mr": "वॉटरप्रूफिंग"
+      },
+      "description": {
+        "en": "Leak & damp protection system",
+        "hi": "लीकेज व सीलन से सुरक्षा",
+        "mr": "गळती व ओलावा संरक्षण प्रणाली"
+      },
+      "surfaces": [
+        "interior",
+        "exterior",
+        "terrace"
+      ],
+      "ratePerSqft": {
+        "min": 35,
+        "max": 70
+      },
+      "includes": [
+        {
+          "en": "Surface prep + waterproof coating system",
+          "hi": "सतह तैयारी + वॉटरप्रूफ कोटिंग",
+          "mr": "पृष्ठभागाची तयारी + वॉटरप्रूफ कोटिंग प्रणाली"
+        }
+      ]
+    }
+  ],
+  "addOns": [
+    {
+      "id": "putty-2coat",
+      "label": {
+        "en": "Wall putty (2 coats)",
+        "hi": "वॉल पुट्टी (2 कोट)",
+        "mr": "वॉल पुट्टी (2 कोट)"
+      },
+      "ratePerSqft": {
+        "min": 8,
+        "max": 12
+      },
+      "surfaces": [
+        "interior"
+      ]
+    },
+    {
+      "id": "crack-filling",
+      "label": {
+        "en": "Crack filling",
+        "hi": "दरार भराई",
+        "mr": "भेगा भरणे"
+      },
+      "flat": {
+        "min": 1500,
+        "max": 5000
+      },
+      "surfaces": [
+        "interior",
+        "exterior",
+        "terrace"
+      ]
+    },
+    {
+      "id": "primer-upgrade",
+      "label": {
+        "en": "Primer upgrade",
+        "hi": "प्राइमर अपग्रेड",
+        "mr": "प्रायमर अपग्रेड"
+      },
+      "ratePerSqft": {
+        "min": 2,
+        "max": 4
+      },
+      "surfaces": [
+        "interior",
+        "exterior"
+      ]
+    },
+    {
+      "id": "furniture-protection",
+      "label": {
+        "en": "Furniture moving & covering",
+        "hi": "फ़र्नीचर हटाना व ढकना",
+        "mr": "फर्निचर हलवणे व झाकणे"
+      },
+      "flat": {
+        "min": 1000,
+        "max": 3000
+      },
+      "surfaces": [
+        "interior"
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "id": "1bhk",
+      "label": {
+        "en": "1 BHK",
+        "hi": "1 BHK",
+        "mr": "1 BHK"
+      },
+      "carpetAreaSqft": 450,
+      "paintableAreaSqft": 1600
+    },
+    {
+      "id": "2bhk",
+      "label": {
+        "en": "2 BHK",
+        "hi": "2 BHK",
+        "mr": "2 BHK"
+      },
+      "carpetAreaSqft": 750,
+      "paintableAreaSqft": 2600
+    },
+    {
+      "id": "3bhk",
+      "label": {
+        "en": "3 BHK",
+        "hi": "3 BHK",
+        "mr": "3 BHK"
+      },
+      "carpetAreaSqft": 1100,
+      "paintableAreaSqft": 3800
+    },
+    {
+      "id": "row-house",
+      "label": {
+        "en": "Row House",
+        "hi": "रो हाउस",
+        "mr": "रो हाऊस"
+      },
+      "carpetAreaSqft": 1400,
+      "paintableAreaSqft": 4800
+    },
+    {
+      "id": "commercial",
+      "label": {
+        "en": "Commercial",
+        "hi": "कमर्शियल",
+        "mr": "व्यावसायिक"
+      },
+      "carpetAreaSqft": 2000,
+      "paintableAreaSqft": 6000
+    }
+  ],
+  "disclaimer": {
+    "en": "Indicative estimate only. Final quote after a free on-site inspection.",
+    "hi": "यह केवल अनुमान है। अंतिम कोटेशन मुफ़्त साइट निरीक्षण के बाद।",
+    "mr": "हा फक्त अंदाज आहे. अंतिम कोटेशन मोफत साइट पाहणीनंतर."
+  }
+}

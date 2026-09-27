@@ -1,0 +1,83 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-09-24",
+  "_note": "PLACEHOLDER OFFERS. The first three restate claims already on the site (free visit, written quote, 5-year waterproofing warranty); the combo is an invented example (sample: true, shown with a SAMPLE badge). No discounts or prices are stated. Replace with the business's real offers before launch.",
+  "items": [
+    {
+      "id": "free-inspection",
+      "badge": {
+        "en": "Free",
+        "hi": "मुफ़्त",
+        "mr": "मोफत"
+      },
+      "title": {
+        "en": "Free site inspection",
+        "hi": "मुफ़्त साइट निरीक्षण",
+        "mr": "मोफत साइट पाहणी"
+      },
+      "desc": {
+        "en": "We visit, check dampness and cracks, and measure the job at no charge.",
+        "hi": "हम आकर सीलन और दरारों की जाँच करते हैं और नाप लेते हैं, बिना किसी शुल्क के।",
+        "mr": "आम्ही भेट देतो, ओलावा व भेगा तपासतो आणि कामाचे मोजमाप मोफत करतो."
+      },
+      "sample": false
+    },
+    {
+      "id": "written-quote",
+      "badge": {
+        "en": "Clear pricing",
+        "hi": "साफ़ दाम",
+        "mr": "स्पष्ट किंमत"
+      },
+      "title": {
+        "en": "Written quote, no surprises",
+        "hi": "लिखित कोटेशन, कोई सरप्राइज़ नहीं",
+        "mr": "लेखी कोटेशन, कोणतेही आश्चर्य नाही"
+      },
+      "desc": {
+        "en": "You get the scope and price in writing before any work starts.",
+        "hi": "काम शुरू होने से पहले काम का दायरा और दाम लिखित में मिलता है।",
+        "mr": "काम सुरू होण्याआधी कामाची व्याप्ती आणि किंमत लेखी मिळते."
+      },
+      "sample": false
+    },
+    {
+      "id": "waterproofing-warranty",
+      "badge": {
+        "en": "5-year",
+        "hi": "5 साल",
+        "mr": "5 वर्षे"
+      },
+      "title": {
+        "en": "5-year waterproofing warranty",
+        "hi": "5 साल की वॉटरप्रूफिंग वारंटी",
+        "mr": "5 वर्षांची वॉटरप्रूफिंग वॉरंटी"
+      },
+      "desc": {
+        "en": "Our waterproofing work is backed by a 5-year warranty.",
+        "hi": "हमारे वॉटरप्रूफिंग काम पर 5 साल की वारंटी है।",
+        "mr": "आमच्या वॉटरप्रूफिंग कामाला 5 वर्षांची वॉरंटी आहे."
+      },
+      "sample": false
+    },
+    {
+      "id": "putty-paint-combo",
+      "badge": {
+        "en": "Combo",
+        "hi": "कॉम्बो",
+        "mr": "कॉम्बो"
+      },
+      "title": {
+        "en": "Putty + paint combo",
+        "hi": "पुट्टी + पेंट कॉम्बो",
+        "mr": "पुट्टी + रंग कॉम्बो"
+      },
+      "desc": {
+        "en": "Book wall putty and painting together and ask for one combined quote.",
+        "hi": "वॉल पुट्टी और पेंटिंग साथ बुक करें और एक साथ कोटेशन माँगें।",
+        "mr": "वॉल पुट्टी आणि रंगकाम एकत्र बुक करा आणि एकच कोटेशन मागा."
+      },
+      "sample": true
+    }
+  ]
+}
